@@ -3,18 +3,35 @@
 #include <iostream>
 using namespace std;
 
-void insertAtPosn(int arr[], int &n, int capacity, int element, int pos) {
-    if (n >= capacity) {
-        cout << "Overflow: Array is full." << endl;
-        return;
+int main() {
+    int arr[100], n, pos, val;
+
+    // Get array input
+    cout << "Enter number of elements: ";
+    cin >> n;
+    cout << "Enter " << n << " elements: ";
+    for (int i = 0; i < n; i++) {
+        cin >> arr[i];
     }
-    if (pos < 0 || pos > n) {
-        cout << "Invalid position!" << endl;
-        return;
+
+    // Get insertion details
+    cout << "Enter position to insert at (0 to " << n << "): ";
+    cin >> pos;
+    cout << "Enter value to insert: ";
+    cin >> val;
+
+    // Shift elements to the right to make space
+    for (int i = n; i > pos; i--) {
+        arr[i] = arr[i - 1];
     }
-    for (int i = n - 1; i >= pos; i--) {
-        arr[i + 1] = arr[i];
+    arr[pos] = val;
+    n++; // Increment array size
+
+    // Output updated array
+    cout << "Updated array: ";
+    for (int i = 0; i < n; i++) {
+        cout << arr[i] << " ";
     }
-    arr[pos] = element;
-    n++;
+
+    return 0;
 }
