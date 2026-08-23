@@ -3,7 +3,7 @@
 #include <iostream>
 using namespace std;
 
-void insertAtPosition(int arr[], int &n, int capacity, int element, int pos) {
+void insertAtPosn(int arr[], int &n, int capacity, int element, int pos) {
     if (n >= capacity) {
         cout << "Overflow: Array is full." << endl;
         return;
