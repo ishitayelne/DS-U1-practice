@@ -27,6 +27,15 @@ int main() {
     arr[pos] = val;
     n++; // Increment array size
 
+    /*
+    // Deletion of array element
+    // Shift elements to the left to overwrite the element at 'pos'
+    for (int i = pos; i < (n-1); i++) {
+        arr[i] = arr[i + 1];
+    }
+    n--; // Decrement array size
+    */
+
     // Output updated array
     cout << "Updated array: ";
     for (int i = 0; i < n; i++) {
