@@ -12,6 +12,13 @@ void reverseArray(int arr[], int size) {
         arr[end] = temp;
         start++;
         end--;
+    //With swap function
+    /*while (start < end) {
+        swap(arr[start], arr[end]);
+        start++;
+        end--;
+    }
+    */
     }
 }
 
