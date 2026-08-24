@@ -1,6 +1,7 @@
 //Paper 1
 //Analyse the algorithm to reverse the array of size 10 with one example.
 #include <iostream>
+//#include <utility> // Required for swap
 using namespace std;
 
 void reverseArray(int arr[], int size) {
@@ -23,26 +24,21 @@ void reverseArray(int arr[], int size) {
 }
 
 int main() {
-    int size;
+    const int SIZE = 10;
+    int arr[SIZE];
 
-    // Get the size of the array from the user
-    cout << "Enter the size of the array: ";
-    cin >> size;
-
-    int arr[size];
-
-    // Get the array elements from the user
-    cout << "Enter " << size << " integers space-separated: ";
-    for (int i = 0; i < size; i++) {
+    // Get 10 integers from the user
+    cout << "Enter " << SIZE << " integers space-separated: ";
+    for (int i = 0; i < SIZE; i++) {
         cin >> arr[i];
     }
 
     // Reverse the array
-    reverseArray(arr, size);
+    reverseArray(arr, SIZE);
 
     // Output the reversed array
     cout << "Reversed array: ";
-    for (int i = 0; i < size; i++) {
+    for (int i = 0; i < SIZE; i++) {
         cout << arr[i] << " ";
     }
     cout << endl;
